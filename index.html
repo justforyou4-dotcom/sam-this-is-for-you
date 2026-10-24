@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- EDIT: page title + link preview text (shown when shared in WhatsApp / Instagram etc.) -->
+  <title>Hey you. 👀</title>
+  <meta name="description" content="Someone made this for you. No occasion needed.">
+  <meta property="og:title" content="Hey you. 👀">
+  <meta property="og:description" content="Open this.">
+  <meta property="og:image" content="assets/images/window.jpg">
+  <meta name="theme-color" content="#f6eee1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+
+<!-- ============ MUSIC CONTROL (appears after "Open this") ============ -->
+<div class="music" id="music" hidden>
+  <button type="button" id="playBtn" aria-label="Pause music">
+    <svg viewBox="0 0 24 24" class="i-pause"><path d="M8 5v14M16 5v14" /></svg>
+    <svg viewBox="0 0 24 24" class="i-play"><path d="M8 5l11 7-11 7z" /></svg>
+  </button>
+  <button type="button" id="muteBtn" aria-label="Mute music">
+    <svg viewBox="0 0 24 24" class="i-vol"><path d="M4 9v6h4l5 4V5L8 9zM16.5 8.5a5 5 0 010 7" /></svg>
+    <svg viewBox="0 0 24 24" class="i-mute"><path d="M4 9v6h4l5 4V5L8 9zM17 9l5 6M22 9l-5 6" /></svg>
+  </button>
+</div>
+
+<!-- ============ OPENING SCREEN ============ -->
+<header class="intro" id="intro">
+  <figure class="intro__photo">
+    <!-- EDIT: opening image -->
+    <img src="assets/images/window.jpg" width="1086" height="1448" alt="A thoughtful moment by a sunlit window" style="object-position:50% 25%">
+  </figure>
+
+  <div class="intro__text" id="introText">
+    <p class="serif big" data-t="0.7">Hey you. 👀</p>
+    <p class="serif big" data-t="2.4">Yes, you.</p>
+    <p class="sans" data-t="4.6">Before you ask…</p>
+    <p class="sans" data-t="6.0">No, you didn't forget an important date. 😂</p>
+    <p class="sans list" data-t="8.0">There's no birthday.</p>
+    <p class="sans list" data-t="9.2">No anniversary.</p>
+    <p class="sans list" data-t="10.4">Nothing to celebrate.</p>
+    <p class="serif mid" data-t="12.2">Well…</p>
+    <p class="hand" data-t="13.6">maybe there is.</p>
+    <button type="button" class="btn" id="openBtn" data-t="15.0">Open this →</button>
+    <p class="hint sans" data-t="15.4">🎧 Best experienced with sound</p>
+  </div>
+</header>
+
+<!-- ============ STORY ============ -->
+<main class="story" id="story" aria-hidden="true">
+
+  <!-- SECTION 1 — SO… WHAT'S THIS? -->
+  <section class="sec s1">
+    <div class="wrap">
+      <p class="sans" data-r>You're probably wondering why someone sent you a whole website.</p>
+      <p class="serif mid" data-r style="--d:.2s">Fair question. 😂</p>
+      <p class="sans" data-r>The answer is actually pretty simple.</p>
+      <p class="serif huge hl" data-r style="--d:.2s"><strong>Someone thought about you today.</strong>
+        <svg class="draw" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C40 2, 70 14, 110 7 S190 3, 230 9 S280 6, 297 5"/></svg>
+      </p>
+      <p class="sans" data-r>And instead of just sending a text…</p>
+      <p class="sans" data-r>they wanted to do something a little different.</p>
+
+      <figure class="polaroid p-s1" data-r data-par="0.04">
+        <i class="tape"></i>
+        <!-- EDIT: section 1 image -->
+        <img loading="lazy" src="assets/images/cozy.jpg" width="1086" height="1448" alt="A warm smile" style="object-position:50% 30%">
+      </figure>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — JUST A REMINDER -->
+  <section class="sec s2">
+    <div class="wrap center">
+      <p class="sans" data-r>Life gets busy.</p>
+      <p class="sans" data-r>Days become weeks.</p>
+      <p class="sans" data-r>Conversations come and go.</p>
+      <p class="sans" data-r>And sometimes we forget to tell the people around us something really simple:</p>
+      <p class="serif quote" data-r><strong>“I'm glad you're here.”</strong></p>
+      <p class="sans" data-r>So consider this your reminder. 💌</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — THE LITTLE THINGS -->
+  <section class="sec s3">
+    <div class="wrap">
+      <p class="serif mid l" data-r>Maybe it's your laugh.
+        <svg class="doodle star" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 L24 16 L36 17 L26 25 L30 37 L20 30 L10 37 L14 25 L4 17 L16 16 Z"/></svg></p>
+      <p class="hand r" data-r>The random conversations.</p>
+      <p class="serif mid l" data-r>The stupid jokes that somehow become inside jokes.</p>
+      <p class="hand r" data-r>The memories nobody else would understand.</p>
+      <p class="serif mid l" data-r>The way you show up.</p>
+      <p class="sans c" data-r>Or simply…</p>
+      <p class="serif big c hl" data-r>the way you make ordinary moments feel a little less ordinary.
+        <svg class="draw" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 8 C50 13, 90 2, 140 8 S230 12, 297 4"/></svg></p>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — MEMORIES -->
+  <section class="sec s4">
+    <div class="wrap">
+      <p class="sans" data-r>Some memories don't look important when they're happening.</p>
+      <p class="sans" data-r>It's just another photo.</p>
+      <p class="sans" data-r>Another conversation.</p>
+      <p class="sans" data-r>Another random day.</p>
+      <p class="sans" data-r>Until one day you look back and realize…</p>
+    </div>
+    <div class="moment">
+      <p class="serif giant" data-r><strong>those were the good days.</strong></p>
+    </div>
+    <div class="wrap center">
+      <p class="sans" data-r>And you were part of them.</p>
+    </div>
+
+    <!-- EDIT: the 3-photo memory collage -->
+    <div class="collage">
+      <figure class="polaroid c1" data-r data-par="0.05"><i class="tape"></i>
+        <img loading="lazy" src="assets/images/laugh.jpg" width="1100" height="825" alt="Two friends laughing in golden light" style="object-position:50% 40%"></figure>
+      <figure class="polaroid c2" data-r data-par="-0.04">
+        <img loading="lazy" src="assets/images/memories.jpg" width="1100" height="825" alt="A scatter of printed memories on a table"></figure>
+      <figure class="polaroid c3" data-r data-par="0.06"><i class="tape t2"></i>
+        <img loading="lazy" src="assets/images/sunset.jpg" width="330" height="365" alt="Watching the sunset together"></figure>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — THINGS YOU PROBABLY DON'T HEAR ENOUGH -->
+  <section class="sec s5">
+    <div class="wrap center">
+      <p class="sans" data-r>Just in case nobody has reminded you lately…</p>
+      <p class="serif huge" data-r><strong>You matter.</strong></p>
+      <p class="serif huge" data-r><strong>You're appreciated.</strong></p>
+      <p class="serif huge" data-r><strong>Your presence makes a difference.</strong></p>
+      <p class="sans" data-r>And somewhere out there…</p>
+      <p class="sans" data-r>someone's life has a few better memories in it because you were there.</p>
+      <p class="hand" data-r>That's pretty special.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — WAIT… -->
+  <section class="sec s6" id="wait">
+    <div class="wrap center">
+      <p class="sans" data-r>But there's still one question.</p>
+      <p class="serif giant" data-r>Why today?</p>
+      <p class="big" data-r>👀</p>
+      <p class="sans" data-r>Why make all of this when there's literally nothing happening?</p>
+      <p class="sans dim" data-r>No birthday.</p>
+      <p class="sans dim" data-r>No anniversary.</p>
+      <p class="sans dim" data-r>No achievement.</p>
+      <p class="sans dim" data-r>No holiday.</p>
+      <p class="sans" data-r>So…</p>
+      <p class="serif mid" data-r>what exactly are we celebrating?</p>
+      <button type="button" class="btn btn--light" id="revealBtn" data-r>Tap to find out →</button>
+    </div>
+  </section>
+
+  <!-- EVERYTHING BELOW STAYS HIDDEN UNTIL "Tap to find out" -->
+  <div id="after" hidden>
+
+    <!-- SECTION 7 — THE PLOT TWIST -->
+    <section class="sec s7" id="twist">
+      <div class="you">
+        <h2 class="serif" id="youWord">You.</h2>
+        <figure class="you__photo" id="youPhoto">
+          <!-- EDIT: plot-twist image -->
+          <img src="assets/images/smile.jpg" width="1086" height="1448" alt="A warm, direct smile" style="object-position:50% 22%">
+        </figure>
+      </div>
+      <div class="wrap">
+        <p class="serif big" data-r>That's it.</p>
+        <p class="serif big" data-r style="--d:.3s">That's the occasion. 😂❤️</p>
+        <p class="sans" data-r>Because maybe we've gotten too used to waiting for special dates to tell people they're special.</p>
+        <p class="sans" data-r>And maybe we shouldn't.</p>
+        <p class="sans" data-r>You don't need to turn a year older.</p>
+        <p class="sans" data-r>You don't need to achieve something huge.</p>
+        <p class="sans" data-r>You don't need a date on the calendar.</p>
+        <p class="sans" data-r>Sometimes…</p>
+        <p class="serif huge" data-r><strong>being you is reason enough to be celebrated.</strong></p>
+      </div>
+    </section>
+
+    <!-- SECTION 8 — THE REAL GIFT -->
+    <section class="sec s8">
+      <div class="wrap">
+        <p class="sans" data-r>So no…</p>
+        <p class="sans" data-r>this isn't a birthday present.</p>
+        <p class="sans" data-r>It isn't an anniversary present.</p>
+        <p class="sans" data-r>And there isn't some secret occasion you forgot. 😂</p>
+        <p class="sans" data-r>It's just a tiny corner of the internet that someone made…</p>
+        <p class="serif huge hl" data-r><strong>because they thought of you.</strong>
+          <svg class="draw" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C40 2, 70 14, 110 7 S190 3, 230 9 S280 6, 297 5"/></svg></p>
+        <p class="sans" data-r>Save it.</p>
+        <p class="sans" data-r>Come back to it someday.</p>
+        <p class="sans" data-r>And whenever life gets a little loud…</p>
+        <p class="sans" data-r>remember that there's someone out there who's really glad you exist. 💌</p>
+      </div>
+    </section>
+
+    <!-- FINAL SCREEN -->
+    <footer class="sec final">
+      <div class="hearts" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <figure class="final__photo" data-r>
+        <!-- EDIT: final image -->
+        <img loading="lazy" src="assets/images/cozy.jpg" width="1086" height="1448" alt="A relaxed, smiling portrait" style="object-position:50% 25%">
+      </figure>
+      <div class="wrap center">
+        <p class="serif big" data-r><strong>No occasion.</strong></p>
+        <p class="serif big" data-r><strong>No reason needed.</strong></p>
+        <p class="sans" data-r>Just someone worth celebrating.</p>
+        <p class="serif huge" data-r><strong>You. ❤️</strong></p>
+        <!-- EDIT: brand signature -->
+        <p class="hand sign" data-r>Made <strong>Just For You</strong> ✨</p>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<!-- EDIT: soundtrack file -->
+<audio id="bgm" src="assets/audio/i-choose-you.mp3" preload="none" loop></audio>
+<noscript><style>[data-r],[data-t]{opacity:1!important;transform:none!important}#after{display:block!important}.story{display:block!important}.intro{position:static!important}</style></noscript>
+<script src="js/script.js"></script>
+</body>
+</html>
